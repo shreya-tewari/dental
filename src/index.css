@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-body font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-black font-bold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-neige-dark text-black;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-neige;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+}
+
+@layer components {
+  .display-headline {
+    @apply text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-none;
+  }
+
+  .section-headline {
+    @apply text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-tight;
+  }
+
+  .section-subheadline {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+
+  .label-tag {
+    @apply text-xs font-semibold uppercase tracking-[0.15em] text-muted;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-black text-neige text-sm font-semibold rounded-full
+           hover:bg-black-soft transition-all duration-200 focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-black focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-black text-black text-sm font-semibold rounded-full
+           hover:bg-neige transition-all duration-200 focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-black focus-visible:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-body text-sm font-medium rounded-full
+           hover:bg-neige transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-neige-dark rounded-2xl p-6 border border-border;
+  }
+
+  .card-white {
+    @apply bg-white rounded-2xl p-6 border border-border shadow-sm;
+  }
+
+  .soft-shadow {
+    box-shadow: 0 4px 24px rgba(18, 18, 18, 0.06);
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /* Marquee pause on hover */
+  .marquee-container:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
