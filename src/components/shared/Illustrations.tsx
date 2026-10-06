@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ShieldCheck, Activity, Sparkles, Mic, CheckCircle2, Scan, Layers } from 'lucide-react';
 
 // ─── 1. Panoramic X-Ray with AI Detection Overlay (Hero & Vision AI) ─────────

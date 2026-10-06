@@ -3,7 +3,7 @@ import { Section } from '../components/shared/Section';
 import { Container } from '../components/shared/Container';
 import { AnimatedSection } from '../components/shared/AnimatedSection';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { blogPosts, blogTags } from '../content/blog';
 
 export default function BlogPage() {

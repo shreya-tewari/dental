@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Button } from '../shared/Button';
 import { Container } from '../shared/Container';
 import { Section } from '../shared/Section';

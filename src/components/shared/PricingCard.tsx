@@ -1,4 +1,3 @@
-import { Check, Minus } from 'lucide-react';
 import { Button } from './Button';
 import { cn } from '../../lib/utils';
 import type { PricingTier } from '../../content/pricing';

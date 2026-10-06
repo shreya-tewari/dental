@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Section } from '../components/shared/Section';
 import { Container } from '../components/shared/Container';
 import { AnimatedSection } from '../components/shared/AnimatedSection';
